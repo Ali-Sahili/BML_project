@@ -1,5 +1,6 @@
 from experiments import ExperimentVadamMLPClass, ExperimentBBBMLPClass
 
+from tqdm import tqdm
 ####################
 ## Set parameters ##
 ####################
@@ -40,17 +41,29 @@ evals_per_epoch = None
 ## Define grid ##
 #################
 
-grid = [(hidden_sizes, mc, bs, prec) 
-for hidden_sizes in ([400], [400,400])
-for mc in (1, 10)
+# grid = [(hidden_sizes, mc, bs, prec)
+# for hidden_sizes in ([400], [400,400])
+# for mc in (1, 10)
+# for bs in (1, 10, 100)
+# for prec in (1e-2, 2e-2, 5e-2, 1e-1, 2e-1, 5e-1, 1e0, 2e0, 5e0, 1e1, 2e1, 5e1, 1e2, 2e2, 5e2)]
+print("Starting ...")
+grid = [(hidden_sizes, mc, bs, prec)
+for hidden_sizes in ([400], )
+for mc in (10, )
 for bs in (1, 10, 100)
-for prec in (1e-2, 2e-2, 5e-2, 1e-1, 2e-1, 5e-1, 1e0, 2e0, 5e0, 1e1, 2e1, 5e1, 1e2, 2e2, 5e2)]
+for prec in ( 5e1, )]
+
 
 ####################################
 ## Run experiemtents sequentially ##
 ####################################
+print("==========================================================")
+j=0
+for i, (hidden_sizes, mc, bs, prec) in tqdm(enumerate(grid)):
+  j+=1
+print('There are ', 2*j, ' experiment in  total')
 
-for i, (hidden_sizes, mc, bs, prec) in enumerate(grid):
+for i, (hidden_sizes, mc, bs, prec) in tqdm(enumerate(grid)):
 
     model_params['hidden_sizes'] = hidden_sizes
     model_params['prior_prec'] = prec
@@ -62,7 +75,7 @@ for i, (hidden_sizes, mc, bs, prec) in enumerate(grid):
         train_params['num_epochs'] = 2
         evals_per_epoch = 600
     elif bs==10:
-        train_params['num_epochs'] = 20
+        train_params['num_epochs'] = 15
         evals_per_epoch = 60
     elif bs==100:
         train_params['num_epochs'] = 200

@@ -46,6 +46,15 @@ def load_final_metric(experiment_name, data_set, model_params, train_params, opt
     # Return history
     return final_metric
 
+
+def load_metrics(file_path):
+    pkl_file = open(file_path, 'rb')
+    metric_history = pickle.load(pkl_file)
+    pkl_file.close()
+    return metric_history
+
+
+
 def load_metric_history(experiment_name, data_set, model_params, train_params, optim_params, results_folder="./results", silent_fail=False):
 
     # Folder to load history from
@@ -492,4 +501,3 @@ class ExperimentVadamMLPClass(Experiment):
         loss = self.objective(logits, y)
         loss.backward()
         return loss
-

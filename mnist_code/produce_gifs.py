@@ -96,34 +96,38 @@ for i, (hidden_sizes, bs) in enumerate(grid):
         elif bs==100:
             train_params['num_epochs'] = 200
             evals_per_epoch = 6
-        
-        metrics = load_metric_history(experiment_name = "bbb_mlp_class",
-                                      data_set = data_set,
-                                      model_params = model_params,
-                                      train_params = train_params,
-                                      optim_params = optim_params,
-                                      results_folder = results_folder)
-        num_evals = len(metrics['test_pred_logloss'])
-        idx = np.arange(start = 0, stop = num_evals, step = plot_every)
-        epoch = (idx+1) * train_params['num_epochs'] / num_evals
-        met = np.array(metrics['test_pred_logloss'])
-        plot_bbb, = plt.plot(epoch, met[idx]/np.log(10), color = 'k', linestyle = '-', linewidth=2)
-        
-        
-        metrics = load_metric_history(experiment_name = "vadam_mlp_class",
-                                      data_set = data_set,
-                                      model_params = model_params,
-                                      train_params = train_params,
-                                      optim_params = optim_params,
-                                      results_folder = results_folder)
-        num_evals = len(metrics['test_pred_logloss'])
-        idx = np.arange(start = 0, stop = num_evals, step = plot_every)
-        epoch = (idx+1) * train_params['num_epochs'] / num_evals
-        met = np.array(metrics['test_pred_logloss'])
-        plot_vadam, = plt.plot(epoch, met[idx]/np.log(10), color = 'r', linestyle = '-', linewidth=2)
-        plot_title = plt.text(train_params['num_epochs']/2, 2.02, "Precision: " + str(prec), horizontalalignment='center', verticalalignment='bottom', fontdict=dict(fontsize=title_size))
-        
-        animated_gif.add([plot_bbb, plot_vadam, plot_title])
+        try:
+            metrics = load_metric_history(experiment_name = "bbb_mlp_class",
+                                          data_set = data_set,
+                                          model_params = model_params,
+                                          train_params = train_params,
+                                          optim_params = optim_params,
+                                          results_folder = results_folder)
+            num_evals = len(metrics['test_pred_logloss'])
+            idx = np.arange(start = 0, stop = num_evals, step = plot_every)
+            epoch = (idx+1) * train_params['num_epochs'] / num_evals
+            met = np.array(metrics['test_pred_logloss'])
+            plot_bbb, = plt.plot(epoch, met[idx]/np.log(10), color = 'k', linestyle = '-', linewidth=2)
+
+
+            metrics = load_metric_history(experiment_name = "vadam_mlp_class",
+                                          data_set = data_set,
+                                          model_params = model_params,
+                                          train_params = train_params,
+                                          optim_params = optim_params,
+                                          results_folder = results_folder)
+            num_evals = len(metrics['test_pred_logloss'])
+            idx = np.arange(start = 0, stop = num_evals, step = plot_every)
+            epoch = (idx+1) * train_params['num_epochs'] / num_evals
+            met = np.array(metrics['test_pred_logloss'])
+            plot_vadam, = plt.plot(epoch, met[idx]/np.log(10), color = 'r', linestyle = '-', linewidth=2)
+            plot_title = plt.text(train_params['num_epochs']/2, 2.02, "Precision: " + str(prec), horizontalalignment='center', verticalalignment='bottom', fontdict=dict(fontsize=title_size))
+
+            animated_gif.add([plot_bbb, plot_vadam, plot_title])
+
+        except:
+            continue
+
     
     plt.rc('text', usetex = True)
     plt.xlim([0,train_params['num_epochs']])
