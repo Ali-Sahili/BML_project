@@ -10,6 +10,8 @@ The experiments were performed using Python 3.8.5 with the following Python pack
 * [matplotlib](https://matplotlib.org/) == 3.1.2
 * [tqdm](https://tqdm.github.io/) == 4.30.0
 
+For Logistic regression, we use Matlab to perform experiments with its [online compiler](https://matlab.mathworks.com/).
+
 ## Install
 
 In the folder containing `setup.py`, run
