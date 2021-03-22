@@ -18,9 +18,23 @@ Some simple examples of how to use the code can be found in `examples`. Here you
 
 ## Reproducing UCI Experiments
 
+The code for the UCI experiments together with obtained results can be found in `uci_code`. Using these results you should be able to reproduce these figures:
+
+<img src="uci_code/plots/uci_legend-page-001.jpg" width="400">
+
+<img src="uci_code/plots/uci_rmse_boston-page-001.jpg" width="200"><img src="uci_code/plots/uci_rmse_concrete-page-001.jpg" width="200"><img src="uci_code/plots/uci_rmse_energy-page-001.jpg" width="200"><img src="uci_code/plots/uci_rmse_kin8nm-page-001.jpg" width="200">
+
+<img src="uci_code/plots/uci_rmse_naval-page-001.jpg" width="200"><img src="uci_code/plots/uci_rmse_powerplant-page-001.jpg" width="200"><img src="uci_code/plots/uci_rmse_wine-page-001.jpg" width="200"><img src="uci_code/plots/uci_rmse_yacht-page-001.jpg" width="200">
+
 ## Reproducing VOGN Experiments
+
+The code for the VOGN experiments together with obtained results can be found in `vogn_code`. Using these results you should be able to reproduce the experiments in the paper. Here is an excerpt of the results:
+
+<img src="vogn_code/animations/mc16.gif" width="400">
+<!-- <img src="vogn_code/plots/plot_bs1_mc1-page-001.jpg" width="200"><img src="vogn_code/plots/plot_bs1_mc16-page-001.jpg" width="200"><img src="vogn_code/plots/plot_bs128_mc16_legend-page-001.jpg" width="200"> -->
 
 ## MNIST Experiments
 
-## Acknowledgment
-* Implementation by [Emtiyaz_Khan](https://github.com/emtiyaz/vadam)
+Code for MNIST experiments (not in the paper) together with obtained results can be found in `mnist_code`. These additional experiments show the performance and convergence speed of Vadam compared to BBVI+Adam on MNIST for a range of hyperparameters. Here is an excerpt of the results, showing convergence for the two algorithms for different prior precisions, which is also used as the initial precision for the variational distribution:
+
+<img src="mnist_code/animations/layer1_batchsize1.gif" width="400">
