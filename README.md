@@ -72,5 +72,13 @@ To run the logistic regression experiments: choose the dataset by specifying the
 
 Results showing the effect of increasing batch size on vadam precision, these figures show the posterior on colon-cancer dataset (first row) and a toy dataset (second row) for batch sizes 2, 5 and 10.
 
+<p float="center">
+  <img src="MNIST/results/vadam_bs_.png " width="885"/>
+</p>
+<p float="center">
+  <img src="MNIST/results/vadam_vs_bbvi_mnist.png " width="885"/>
+</p>
+Test log loss showing the speed of convergence of Vadam and BBVI; we can notice that increasing the batch size for Vadam slow down convergence, and it becomes similar to BBVI for batch size=1.
+
 ## Aknownledgements
 Original implementation by [Emtiyaz_khan](github.com/emtiyaz/vadam)
