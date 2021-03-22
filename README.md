@@ -61,5 +61,14 @@ To run the logistic regression experiments: choose the dataset by specifying the
   - run_experiments.py <br />
   - Visualizing.ipynb - This is a jupyter notebook for visualizing the results of the experiment. It loads files produced by `run_experiments.py`. <br />
 
+## Results
+<p float="center">
+  <img src="Logistic_reg/results/colon-cancer.png" width="500"/>
+</p>
+
+<p float="center">
+  <img src="Logistic_reg/results/simple_dataset.png" width="500"/>
+</p>
+
 ## Aknownledgements
 Original implementation by [Emtiyaz_khan](github.com/emtiyaz/vadam)
