@@ -28,6 +28,10 @@ There are 4 python scripts:
 ## Testing the Code
 
 ## MNIST Experiments
-
+To run the MNIST experiments:
+```
+python MNIST/run_experiments.py
+```
+You can specify the hyperparameters to explore by changing the `grid` variable in the this script.
 ## Aknownledgements
 Original implementation by [Emtiyaz_khan](github.com/emtiyaz/vadam)
