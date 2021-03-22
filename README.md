@@ -27,6 +27,11 @@ pip install --user -e .
     |fourclass.mat - training data and labels of [fourclass]() dataset. <br />
     |breast_cancer_scale.mat - training data and labels of [breast_cancer_scale]() dataset. <br />
     |usps_resampled.mat - training data and labels of [usps_resampled]() dataset. <br />
+  |main.m - main script to run experiments (vadam, vogn and mf-exact) on different datasets. <br />
+  |main_3d.m - main script to run experiments (vadam, vogn and mf-exact) on different datasets with an additional feature dimension. <br />
+  |plot_results.m - script to plot results showing the posterior and the uncertainty of each method. <br />
+  |lib - Folder containing some useful functions used to compute likelihoods, posterior distributions, uncertainty and so on. <br />
+  |results - contains some of our results on two of the used datasets. <br />
 |vadam <br />
   |models.py <br />
   |datasets.py <br />
@@ -42,6 +47,7 @@ pip install --user -e .
   |experiments.py <br />
   |run_experiments.py <br />
   |Visualizing.ipynb - This is a jupyter notebook for visualizing the results of the experiment. It loads files produced by `run_experiments.py`. <br />
+<pre>
 
 ## Testing the Code
 
