@@ -22,7 +22,7 @@ model_params = {'hidden_sizes': [50],
                 'noise_prec': None}
 
 # Training parameters
-train_params = {'num_epochs': 40,
+train_params = {'num_epochs': 1,
                 'batch_size': None,
                 'train_mc_samples': None,
                 'eval_mc_samples': 100,
@@ -49,23 +49,24 @@ alpha = 1e-2
 #################
 
 all_data_sets = \
-["yacht" + str(i) for i in range(20)] + \
-["energy" + str(i) for i in range(20)] + \
-["boston" + str(i) for i in range(20)] + \
-["concrete" + str(i) for i in range(20)] + \
-["wine" + str(i) for i in range(20)] + \
-["kin8nm" + str(i) for i in range(20)] + \
-["naval" + str(i) for i in range(20)] + \
-["powerplant" + str(i) for i in range(20)]
+["yacht" + str(i) for i in range(20)] # + \
+# ["energy" + str(i) for i in range(20)] + \
+# ["boston" + str(i) for i in range(20)] + \
+# ["concrete" + str(i) for i in range(20)] + \
+# ["wine" + str(i) for i in range(20)] + \
+# ["kin8nm" + str(i) for i in range(20)] + \
+# ["naval" + str(i) for i in range(20)] + \
+# ["powerplant" + str(i) for i in range(20)]
 
-large_data_sets = \
-["wine" + str(i) for i in range(20)] + \
-["kin8nm" + str(i) for i in range(20)] + \
-["naval" + str(i) for i in range(20)] + \
-["powerplant" + str(i) for i in range(20)]
+large_data_sets = [] # \
+# ["wine" + str(i) for i in range(20)] + \
+# ["kin8nm" + str(i) for i in range(20)] + \
+# ["naval" + str(i) for i in range(20)] + \
+# ["powerplant" + str(i) for i in range(20)]
 
-grid = [(data_set) 
-for data_set in all_data_sets]
+grid = [(data_set) for data_set in all_data_sets]
+grid = grid[:1]
+print(len(grid))
 
 #########################
 ## Run BO sequentially ##
