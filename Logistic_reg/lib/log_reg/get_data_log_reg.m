@@ -38,52 +38,7 @@ case 'synth'
   y = sign(eta);
   [X, y, X_te, y_te] = split_data(y, X, 0.5);
 
-case {'a2a','a3a','a4a','a5a','a6a','a7a'}
-    setSeed(seed);
-  load(name);
-  [N,D] = size(X);
-  X = [ones(N,1) X];
-  [N_te,D] = size(X_te);
-  X_te = [ones(N_te,1) X_te];
-  y = (y+1)/2;
-  y_te = (y_te+1)/2;
-  assert ( length(unique(abs(y))) == 2)
-  assert ( length(unique(abs(2*y-1))) == 1)
-
-case {'svmguide3'}
-    setSeed(seed);
-  load(name);
-  [N,D] = size(X);
-  X = [ones(N,1) X];
-  [N_te,D] = size(X_te);
-  X_te = [ones(N_te,1) X_te];
-  y = (y+1)/2;
-  y_te = (y_te+1)/2;
-  assert ( length(unique(abs(y))) == 2)
-  assert ( length(unique(abs(2*y-1))) == 1)
-
-case 'svmguide1'
-    setSeed(seed);
-  load(name);
-  [N,D] = size(X);
-  X = [ones(N,1) X];
-  [N_te,D] = size(X_te);
-  X_te = [ones(N_te,1) X_te];
-  assert ( length(unique(abs(y))) == 2)
-  assert ( length(unique(abs(2*y-1))) == 1)
-
-case 'a1a'
-    setSeed(seed);
-  load(name);
-  [N,D] = size(X);
-  X = [ones(N,1) X zeros(N,4)];
-  [N_te,D] = size(X_te);
-  X_te = [ones(N_te,1) X_te];
-  y = (y+1)/2;
-  y_te = (y_te+1)/2;
-  assert ( length(unique(abs(y))) == 2)
-  assert ( length(unique(abs(2*y-1))) == 1)
-
+% add fourclass dataset  
 case {'colon-cancer'}
   load(name);
   [N,D] = size(X);
@@ -92,6 +47,7 @@ case {'colon-cancer'}
   setSeed(seed);
   [X, y, X_te, y_te] = split_data(y, X, 0.5);
 
+% add fourclass dataset  
 case {'fourclass'}
   load(name);
   [N,D] = size(X);
@@ -101,65 +57,6 @@ case {'fourclass'}
   setSeed(seed);
   [X, y, X_te, y_te] = split_data(y, X, 0.5);  
   
-case {'duke'}
-  load(name);
-  [N,D] = size(X);
-  X = [ones(N,1) full(X)];
-  y = (y+1)/2;
-  setSeed(seed);
-  [X, y, X_te, y_te] = split_data(y, X, 0.5);
-
-case {'leukemia'}
-    setSeed(seed);
-  load(name);
-  [N,D] = size(X);
-  X = [ones(N,1) X];
-  [N_te,D] = size(X_te);
-  X_te = [ones(N_te,1) X_te];
-  y = (y+1)/2;
-  y_te = (y_te+1)/2;
-  assert ( length(unique(abs(y))) == 2)
-  assert ( length(unique(abs(2*y-1))) == 1)
-
-case {'gisette_scale'}
-  load(name);
-  X = [X; X_te];
-  y = [y; y_te];
-  [N,D] = size(X);
-  X = [ones(N,1) full(X)];
-  y = (y+1)/2;
-  unique(y)
-  setSeed(seed);
-  [X, y, X_te, y_te] = split_data(y, X, 0.5);
-
-case {'covtype_binary_scale'}
-  load(name);
-  [N,D] = size(X);
-  X = [ones(N,1) full(X)];
-  y = y-1;
-  setSeed(seed);
-  [X, y, X_te, y_te] = split_data(y, X, 0.5);
-  assert ( length(unique(abs(y))) == 2)
-  assert ( length(unique(abs(2*y-1))) == 1)
-
-case {'SUSY'}
-  load('SUSY.amat','-mat');
-  [N,D] = size(X);
-  X = [ones(N,1) full(X)];
-  setSeed(seed);
-  [X, y, X_te, y_te] = split_data(y, X, 0.5);
-  assert ( length(unique(abs(y))) == 2)
-  assert ( length(unique(abs(2*y-1))) == 1)
-
-case {'australian_scale', 'diabetes_scale'}
-  load(name);
-  [N,D] = size(X);
-  X = [ones(N,1) full(X)];
-  y = (y+1)/2;
-  setSeed(seed);
-  [X, y, X_te, y_te] = split_data(y, X, 0.5);
-  assert ( length(unique(abs(y))) == 2)
-  assert ( length(unique(abs(2*y-1))) == 1)
 
 case {'breast_cancer_scale'}
     setSeed(seed);
