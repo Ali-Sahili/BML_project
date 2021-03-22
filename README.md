@@ -1,4 +1,4 @@
-# Vadam
+# BML Project
 #### Implementation of the paper ["Fast and Scalable Estimation of Uncertainty using Bayesian Deep Learning"](https://arxiv.org/abs/1806.04854)
 
 ## Install
