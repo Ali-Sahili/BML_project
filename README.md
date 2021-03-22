@@ -33,9 +33,9 @@ To run the logistic regression experiments: choose the dataset by specifying the
 
 ## Scripts hierarchy:
 
-|Logistic_reg <br />
-  |datasets <br />
-    |preprocess.py - prepare data as a .csv file before processing. <br />
+|>Logistic_reg <br />
+  |>datasets <br />
+    |>preprocess.py - prepare data as a .csv file before processing. <br />
     |colon-cancer.mat - training data and labels of [colo-cancer]() dataset. <br />
     |fourclass.mat - training data and labels of [fourclass]() dataset. <br />
     |breast_cancer_scale.mat - training data and labels of [breast_cancer_scale]() dataset. <br />
