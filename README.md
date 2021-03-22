@@ -70,5 +70,7 @@ To run the logistic regression experiments: choose the dataset by specifying the
   <img src="Logistic_reg/results/simple_dataset.png" width="900"/>
 </p>
 
+Results showing the effect of increasing batch size on vadam precision, these figures show the posterior on colon-cancer dataset (first row) and a toy dataset (second row) for batch sizes 2, 5 and 10.
+
 ## Aknownledgements
 Original implementation by [Emtiyaz_khan](github.com/emtiyaz/vadam)
