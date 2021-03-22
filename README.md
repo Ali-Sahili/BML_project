@@ -33,11 +33,11 @@ To run the logistic regression experiments: choose the dataset by specifying the
 
 ## Scripts hierarchy:
 
-|>Logistic_reg <br />
-  |>datasets <br />
-    |>preprocess.py - prepare data as a .csv file before processing. <br />
-    |colon-cancer.mat - training data and labels of [colo-cancer]() dataset. <br />
-    |fourclass.mat - training data and labels of [fourclass]() dataset. <br />
+- Logistic_reg <br />
+  - datasets <br />
+    - preprocess.py - prepare data as a .csv file before processing. <br />
+    - colon-cancer.mat - training data and labels of [colo-cancer]() dataset. <br />
+    - fourclass.mat - training data and labels of [fourclass]() dataset. <br />
     |breast_cancer_scale.mat - training data and labels of [breast_cancer_scale]() dataset. <br />
     |usps_resampled.mat - training data and labels of [usps_resampled]() dataset. <br />
   |main.m - main script to run experiments (vadam, vogn and mf-exact) on different datasets. <br />
