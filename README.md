@@ -32,7 +32,7 @@ You can specify the hyperparameters to explore by changing the `grid` variable i
 To run the logistic regression experiments: choose the dataset by specifying the dataset_name parameter and run the main file in Matlab.
 
 ## Scripts hierarchy:
-<pre>
+
 |Logistic_reg <br />
   |datasets <br />
     |preprocess.py - prepare data as a .csv file before processing. <br />
@@ -60,7 +60,7 @@ To run the logistic regression experiments: choose the dataset by specifying the
   |experiments.py <br />
   |run_experiments.py <br />
   |Visualizing.ipynb - This is a jupyter notebook for visualizing the results of the experiment. It loads files produced by `run_experiments.py`. <br />
-</pre>
+
 
 
 ## Aknownledgements
