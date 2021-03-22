@@ -19,20 +19,29 @@ In the folder containing `setup.py`, run
 pip install --user -e .
 ```
 ## Scripts explanation:
-|Logistic_reg
-  |datasets
-    |preprocess.py - prepare data as a .csv file before processing.
-    |colon-cancer.mat - training data and labels of [colo-cancer]() dataset.
-    |fourclass.mat - training data and labels of [fourclass]() dataset.
-    |breast_cancer_scale.mat - training data and labels of [breast_cancer_scale]() dataset.
-    |usps_resampled.mat - training data and labels of [usps_resampled]() dataset.
-|vadam
-|VOGN
-|MNIST
-* `run_experiments.py` - This is the main script to run experiments.
-* `experiments.py` - This script implements experiment classes for Vadam and BBVI.
-* `produce_gifs.py` - This script is for producing the animated GIFs. It loads files produced by `run_experiments.py`.
-* `visualize_results.ipynb` - This is a jupyter notebook for visualizing the results of the experiment. It loads files produced by `run_experiments.py`.
+<pre>
+|Logistic_reg <br />
+  |datasets <br />
+    |preprocess.py - prepare data as a .csv file before processing. <br />
+    |colon-cancer.mat - training data and labels of [colo-cancer]() dataset. <br />
+    |fourclass.mat - training data and labels of [fourclass]() dataset. <br />
+    |breast_cancer_scale.mat - training data and labels of [breast_cancer_scale]() dataset. <br />
+    |usps_resampled.mat - training data and labels of [usps_resampled]() dataset. <br />
+|vadam <br />
+  |models.py <br />
+  |datasets.py <br />
+  |optimizers.py <br />
+  |metrics.py <br />
+  |utils.py <br />
+|VOGN <br />
+  |results - Results of varying some parameters of VOGN <br />
+  |experiments.py <br />
+  |run_experiments.py <br />
+|MNIST <br />
+  |results - Results of varying some parameters of VOGN <br />
+  |experiments.py <br />
+  |run_experiments.py <br />
+  |Visualizing.ipynb - This is a jupyter notebook for visualizing the results of the experiment. It loads files produced by `run_experiments.py`. <br />
 
 ## Testing the Code
 
