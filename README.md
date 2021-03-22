@@ -23,12 +23,8 @@ To run the MNIST experiments:
 ```
 python MNIST/run_experiments.py
 ```
-If you encounter this error `urllib.error.HTTPError: HTTP Error 503: Service Unavailable`, please download the datasets from their website (links will be printed with the error)
+If you encounter this error `urllib.error.HTTPError: HTTP Error 503: Service Unavailable`, please download the datasets from their website (links will be printed with the error).
 
-To run the VOGN experiments on MNIST dataset:
-```
-python VGGN/run_experiments.py
-```
 You can specify the hyperparameters to explore by changing the `grid` variable in the this script.
 
 To run the logistic regression experiments: choose the dataset by specifying the dataset_name parameter and run the main file in Matlab.
