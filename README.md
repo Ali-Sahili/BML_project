@@ -45,7 +45,7 @@ To run the logistic regression experiments: choose the dataset by specifying the
   - **plot_results.m** - script to plot results showing the posterior and the uncertainty of each method. <br />
   - **lib** - Folder containing some useful functions used to compute likelihoods, posterior distributions, uncertainty and so on. <br />
   - **results** - contains some of our results on two of the used datasets. <br />
-- **vadam* <br />
+- **vadam** <br />
   - **models.py** <br />
   - **datasets.py** <br />
   - **optimizers.py** <br />
