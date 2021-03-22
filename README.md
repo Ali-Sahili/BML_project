@@ -12,16 +12,14 @@ In the folder containing `setup.py`, run
 ```
 pip install --user -e .
 ```
+## Scripts explanation:
+There are 4 python scripts:
+* `run_experiments.py` - This is the main script to run experiments.
+* `experiments.py` - This script implements experiment classes for Vadam and BBVI.
+* `produce_gifs.py` - This script is for producing the animated GIFs. It loads files produced by `run_experiments.py`.
+* `visualize_results.ipynb` - This is a jupyter notebook for visualizing the results of the experiment. It loads files produced by `run_experiments.py`.
 
 ## Testing the Code
-
-Some simple examples of how to use the code can be found in `examples`. Here you can see the switch from the Adam optimizer to the Vadam optimizer called on the same model.
-
-## Reproducing UCI Experiments
-
-
-## Reproducing VOGN Experiments
-
 
 ## MNIST Experiments
 
