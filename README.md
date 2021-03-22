@@ -63,11 +63,11 @@ To run the logistic regression experiments: choose the dataset by specifying the
 
 ## Results
 <p float="center">
-  <img src="Logistic_reg/results/colon-cancer.png" width="500"/>
+  <img src="Logistic_reg/results/colon-cancer.png" width="720"/>
 </p>
 
 <p float="center">
-  <img src="Logistic_reg/results/simple_dataset.png" width="500"/>
+  <img src="Logistic_reg/results/simple_dataset.png" width="720"/>
 </p>
 
 ## Aknownledgements
