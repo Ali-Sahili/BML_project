@@ -75,4 +75,4 @@ Results showing the effect of increasing batch size on vadam precision, these fi
 Test log loss showing the speed of convergence of Vadam and BBVI; we can notice that increasing the batch size for Vadam slow down convergence, and it becomes similar to BBVI for batch size=1.
 
 ## Aknownledgements
-Original implementation by [Emtiyaz_khan](github.com/emtiyaz/vadam)
+Original implementation by [Emtiyaz_khan](https://github.com/emtiyaz/vadam)
