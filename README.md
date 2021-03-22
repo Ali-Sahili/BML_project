@@ -2,9 +2,13 @@
 #### Implementation of the paper ["Fast and Scalable Estimation of Uncertainty using Bayesian Deep Learning"](https://arxiv.org/abs/1806.04854)
 
 ## Requirements
-The experiment was performed using Python 3.5.2 with the following Python packages:
+The experiments were performed using Python 3.8.5 with the following Python packages:
 * [torch](https://pytorch.org/) == 0.4.0
+* [torchvision](https://pypi.org/project/torchvision/0.1.8/) == 0.6.1
 * [numpy](http://www.numpy.org/) == 1.14.1
+* [pandas](https://pandas.pydata.org/) == 0.25.3
+* [matplotlib](https://matplotlib.org/) == 3.1.2
+* [tqdm](https://tqdm.github.io/) == 4.30.0
 
 ## Install
 
