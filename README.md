@@ -18,7 +18,20 @@ In the folder containing `setup.py`, run
 ```
 pip install --user -e .
 ```
-## Scripts explanation:
+## Testing the Code
+To run the MNIST experiments:
+```
+python MNIST/run_experiments.py
+```
+To run the VOGN experiments on MNIST dataset:
+```
+python VGGN/run_experiments.py
+```
+You can specify the hyperparameters to explore by changing the `grid` variable in the this script.
+
+To run the logistic regression experiments: choose the dataset by specifying the dataset_name parameter and run the main file in Matlab.
+
+## Scripts hierarchy:
 <pre>
 |Logistic_reg <br />
   |datasets <br />
@@ -47,15 +60,8 @@ pip install --user -e .
   |experiments.py <br />
   |run_experiments.py <br />
   |Visualizing.ipynb - This is a jupyter notebook for visualizing the results of the experiment. It loads files produced by `run_experiments.py`. <br />
-<pre>
+</pre>
 
-## Testing the Code
 
-## MNIST Experiments
-To run the MNIST experiments:
-```
-python MNIST/run_experiments.py
-```
-You can specify the hyperparameters to explore by changing the `grid` variable in the this script.
 ## Aknownledgements
 Original implementation by [Emtiyaz_khan](github.com/emtiyaz/vadam)
